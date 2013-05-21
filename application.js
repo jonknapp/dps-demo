@@ -40,10 +40,10 @@
             }, this);
 
             request.completedSignal.add(function(transaction) {
-                log('COMPLETE SIGNAL');
+                log('COMPLETE SIGNAL: state = ' + transaction.state);
                 if (transaction.state == adobeDPS.TransactionState.FAILED) {
                     log('FAILED');
-                } else if (transaction.state == adobeDPS.TransactionState.FINISHED){
+                } else if (transaction.state == adobeDPS.TransactionState.FINISHED) {
                     log('COMPLETE!');
                     logUserInfo();
                 }
