@@ -22,11 +22,17 @@
             error('adobeDPS object not found');
         }
 
+        $('#clear-log').on('click', clearLog);
         $('form').on('submit', login);
         $('form [type=submit]').on('click', login);
         $('#download').on('click', download);
         $('#magazine-info').on('click', prepareDownload);
         $('#print-log').on('click', dumpLog);
+    }
+
+    function clearLog(event) {
+        event.preventDefault();
+        $('#log').text('');
     }
 
     function download(event) {
