@@ -11,17 +11,40 @@
   </head>
   <body>
     <form>
-      <label for="email">Email:</label>
-      <input id="email" name="email" type="email" />
+      <fieldset>
+        <legend>Logging</legend>
+        <button id="print-log">Dump DPS Log</button>
+        <select name="logLevels[]" multiple>
+          <option>BRIDGE</option>
+          <option>DEBUG</option>
+          <option>PROFILE</option>
+          <option>INFO</option>
+          <option>WARN</option>
+          <option>ERROR</option>
+        </select>
+      </fieldset>
 
-      <label for="password">Password:</label>
-      <input id="password" name="password" type="password" />
+      <fieldset>
+        <legend>Login</legend>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" />
 
-      <input type="submit" />
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" />
+
+        <input type="submit" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Download</legend>
+        <button id="magazine-info">Magazine Info</button>
+        <button id="download">Download</button>
+      </fieldset>
     </form>
     <h3>Log:</h3>
     <div id="log"></div>
 
+    <script src="lodash.min.js"></script>
     <script src="jquery-2.0.0.min.js"></script>
     <script src="xdate.js"></script>
     <script src="application.js"></script>
