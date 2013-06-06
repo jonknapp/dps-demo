@@ -38,7 +38,7 @@
     function download(event) {
         event.preventDefault();
 
-        if (folioToDownload && folioToDownload.isDownloadable) {
+        if (folioToDownload && folioToDownload.state == 200) {
             try {
                 log('starting download');
                 var transaction = folioToDownload.download();
